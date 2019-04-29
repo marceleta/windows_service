@@ -1,5 +1,5 @@
 import logging
-from datatime import datatime, tzinfo, timedelta
+from datetime import datetime, tzinfo, timedelta
 from flask import Flask
 
 app = Flask(__name__)

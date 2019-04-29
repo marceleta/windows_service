@@ -15,7 +15,7 @@ sys.path.append(os.path.dirname(__name__))
 from myapp import app
 
 logging.basicConfig(
-    filename = 'c:\\temp\\hello-service.log',
+    filename = 'c:\\python\\hello-service.log',
     level = logging.DEBUG,
     format = '[helloflask] %(levelname) -7.7s %(message)s'
 )
@@ -49,5 +49,5 @@ class HelloFlaskSvc(win32serviceutil.ServiceFramework):
     def main(self):
         app.run(host='127.0.0.1', port=8900)
 
-if __name__ = '__main__':
+if __name__ == '__main__':
     win32serviceutil.HandleCommandLine(HelloFlaskSvc)
