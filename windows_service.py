@@ -47,7 +47,14 @@ class HelloFlaskSvc(win32serviceutil.ServiceFramework):
         self.main()
 
     def main(self):
-        app.run(host='127.0.0.1', port=8900)
+        self.processo()
+
+    def processo(self):
+        while True:
+            logging.info('aplicativo rodando...')
+            time.sleep(30)
+
+
 
 if __name__ == '__main__':
     win32serviceutil.HandleCommandLine(HelloFlaskSvc)
